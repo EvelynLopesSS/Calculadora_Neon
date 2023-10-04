@@ -1,0 +1,220 @@
+
+body, html {
+    height: 100%;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    background-image: url('https://img.freepik.com/vetores-gratis/fundo-de-numerologia-gradiente_23-2150051046.jpg'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px;
+}
+#expression {
+    font-size: 36px; 
+    width: 400px; 
+    height: 80px ;
+    font-family: 'LCD', sans-serif;
+    color: #5aeff2; 
+    text-shadow: 4px 6px 6px #d11515; 
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 2px solid #FFA500; 
+    border-radius: 5px; 
+    padding: 5px; 
+    box-shadow: 10px 10px 10px rgba(255, 165, 0, 0.5); 
+    margin: 0 auto;
+}
+.card {
+    width: 150%;
+    height: 600px; 
+    background-color:rgba(53, 23, 79, 0.5);
+    border-radius: 15px; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) perspective(1000px) rotateX(30deg); 
+    transition: transform 0.5s ease; 
+    margin: 0 auto;
+  
+}
+/* Rotação 3D quando o mouse passa sobre o card */
+
+.card-show {
+            transform: translate(-50%, -50%) perspective(1000px) rotateX(0deg); /
+        }
+.card:hover {
+            transform: translate(-50%, -50%) perspective(1000px) rotateX(0deg); 
+        }
+.card-title {
+   
+    background-image: linear-gradient(45deg,  #00FFFF, #FF1493, #FFFF00, #008000);
+    -webkit-background-clip: text; 
+    color: transparent; 
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5); 
+    font-weight: bold; 
+}
+
+
+.container {
+    text-align: right;
+    padding: 20px;
+}
+
+/* Estilo dos botões */
+
+.btn-group {
+            margin: -6px; 
+        }
+.btn-group .col {
+    margin: -10px; 
+}
+.btn-num {
+    width: 75px;
+    height: 75px;
+    font-size: 20px;
+    margin: 2px;
+    border: 1px solid hotpink; 
+    box-shadow: 5px 5px 5px hotpink; 
+    font-weight: bold; 
+    
+}
+.btn-operator {
+    width: 75px;
+    height: 75px;
+    font-size: 20px;
+    margin: 2px;
+    box-shadow: 5px 5px 5px yellow; 
+    font-weight: bold; 
+    color: white; 
+
+}
+.btn-equal {
+    width: 75px;
+    height: 75px;
+    font-size: 20px;
+    margin: 2px;
+    box-shadow: 5px 5px 5px green; 
+    font-weight: bold; 
+    color: white; 
+
+}
+.bn-C {
+    width: 80px; 
+    height: 40px; 
+    font-size: 13px; 
+    margin: 2px;
+    color: white; 
+    font-weight: bold; 
+    border-radius: 50%; 
+    box-shadow: 5px 5px 5px red; 
+}
+
+@keyframes neon-rotate {
+    0% {
+        box-shadow: 
+            0 0 10px rgba(148, 0, 211, 0.8),
+            0 0 20px rgba(255, 0, 255, 0.8),
+            0 0 30px rgba(255, 255, 0, 0.8),
+            0 0 40px rgba(0, 128, 0, 0.8),
+            0 0 50px rgba(0, 0, 255, 0.8),
+            0 0 60px rgba(255, 0, 0, 0.8),
+            0 0 70px rgba(255, 165, 0, 0.8);
+    }
+    14% {
+        box-shadow: 
+            0 0 10px rgba(255, 0, 255, 0.8),
+            0 0 20px rgba(255, 255, 0, 0.8),
+            0 0 30px rgba(0, 128, 0, 0.8),
+            0 0 40px rgba(0, 0, 255, 0.8),
+            0 0 50px rgba(255, 0, 0, 0.8),
+            0 0 60px rgba(255, 165, 0, 0.8),
+            0 0 70px rgba(148, 0, 211, 0.8);
+    }
+    28% {
+        box-shadow: 
+            0 0 10px rgba(255, 255, 0, 0.8),
+            0 0 20px rgba(0, 128, 0, 0.8),
+            0 0 30px rgba(0, 0, 255, 0.8),
+            0 0 40px rgba(255, 0, 0, 0.8),
+            0 0 50px rgba(255, 165, 0, 0.8),
+            0 0 60px rgba(148, 0, 211, 0.8),
+            0 0 70px rgba(255, 0, 255, 0.8);
+    }
+    42% {
+        box-shadow: 
+            0 0 10px rgba(0, 128, 0, 0.8),
+            0 0 20px rgba(0, 0, 255, 0.8),
+            0 0 30px rgba(255, 0, 0, 0.8),
+            0 0 40px rgba(255, 165, 0, 0.8),
+            0 0 50px rgba(148, 0, 211, 0.8),
+            0 0 60px rgba(255, 0, 255, 0.8),
+            0 0 70px rgba(255, 255, 0, 0.8);
+    }
+    57% {
+        box-shadow: 
+            0 0 10px rgba(0, 0, 255, 0.8),
+            0 0 20px rgba(255, 0, 0, 0.8),
+            0 0 30px rgba(255, 165, 0, 0.8),
+            0 0 40px rgba(148, 0, 211, 0.8),
+            0 0 50px rgba(255, 0, 255, 0.8),
+            0 0 60px rgba(255, 255, 0, 0.8),
+            0 0 70px rgba(0, 128, 0, 0.8);
+    }
+    71% {
+        box-shadow: 
+            0 0 10px rgba(255, 0, 0, 0.8),
+            0 0 20px rgba(255, 165, 0, 0.8),
+            0 0 30px rgba(148, 0, 211, 0.8),
+            0 0 40px rgba(255, 0, 255, 0.8),
+            0 0 50px rgba(255, 255, 0, 0.8),
+            0 0 60px rgba(0, 128, 0, 0.8),
+            0 0 70px rgba(0, 0, 255, 0.8);
+    }
+    85% {
+        box-shadow: 
+            0 0 10px rgba(255, 165, 0, 0.8),
+            0 0 20px rgba(148, 0, 211, 0.8),
+            0 0 30px rgba(255, 0, 255, 0.8),
+            0 0 40px rgba(255, 255, 0, 0.8),
+            0 0 50px rgba(0, 128, 0, 0.8),
+            0 0 60px rgba(0, 0, 255, 0.8),
+            0 0 70px rgba(255, 0, 0, 0.8);
+    }
+    100% {
+        box-shadow: 
+            0 0 10px rgba(148, 0, 211, 0.8),
+            0 0 20px rgba(255, 0, 255, 0.8),
+            0 0 30px rgba(255, 255, 0, 0.8),
+            0 0 40px rgba(0, 128, 0, 0.8),
+            0 0 50px rgba(0, 0, 255, 0.8),
+            0 0 60px rgba(255, 0, 0, 0.8),
+            0 0 70px rgba(255, 165, 0, 0.8);
+    }
+}
+
+.neon-rotate {
+    animation: neon-rotate 2s infinite linear;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+/*  números neons piscantes */
+.neon-number {
+            position: absolute;
+            font-family: 'LCD', sans-serif;
+            font-size: 100px;
+            color: #23c77b; 
+            text-shadow: 6px 6px 6px #d11579; 
+            animation: neon-fall 3s linear forwards; 
+        }
+
+        @keyframes neon-fall {
+            0% {
+                transform: translateY(-10%);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(110vh); 
+                opacity: 0; 
+            }
+        }
