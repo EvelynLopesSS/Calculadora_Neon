@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora Neon</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{url_for('static', filename= 'css/calculadora.css')}}">
+    <script src="{{ url_for('static', filename='js/calculadora.js') }}"></script>
+
+</head>
+<body class="neon-flash">
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+            <div class="col-md-4 text-center">
+                <div class="card neon-rotate">
+                    <div class="card-body">
+                        <h1 class="card-title text-center">Calculadora Neon</h1>
+                        <form method="POST" action="/calculate">
+                            <div class="form-group">
+                                <input type="text" id="expression" name="expression" class="form-control" value="{{ expression }}" readonly>
+                            </div>
+                            <div class="row mt-3">  
+                                <div class="col"></div> <!-- Coluna vazia para espaçamento -->
+                                <div class="col"></div> <!-- Coluna vazia para espaçamento -->
+                                <div class="col">
+                                    <button type="button" class="btn btn-outline-danger bn-C" onclick="clearDisplay()">C</button>
+                                </div>
+                                <div class="col">
+                                    <button type="button" class="btn btn-outline-danger bn-C" onclick="clearLastEntry()">CE</button>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col btn-group">
+                                    <button type="button" class="btn btn-outline-light btn-num" onclick="appendToDisplay('7')">7</button>
+                                </div>
+                                <div class="col btn-group">
+                                    <button type="button" class="btn btn-outline-light btn-num" onclick="appendToDisplay('8')">8</button>
+                                </div>
+                                <div class="col btn-group">
+                                    <button type="button" class="btn btn-outline-light btn-num" onclick="appendToDisplay('9')">9</button>
+                                </div>
+                                <div class="col btn-group">
+                                    <button type="button" class="btn btn-outline-warning btn-operator" onclick="appendToDisplay('/')">/</button>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col btn-group">
+                                    <button type="button" class="btn btn-outline-light btn-num" onclick="appendToDisplay('4')">4</button>
+                                </div>
+                                <div class="col btn-group">
+                                    <button type="button" class="btn btn-outline-light btn-num" onclick="appendToDisplay('5')">5</button>
+                                </div>
+                                <div class="col btn-group">
+                                    <button type="button" class="btn btn-outline-light btn-num" onclick="appendToDisplay('6')">6</button>
+                                </div>
+                                <div class="col btn-group">
+                                    <button type="button" class="btn btn-outline-warning btn-operator" onclick="appendToDisplay('*')">*</button>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col btn-group">
+                                    <button type="button" class="btn btn-outline-light btn-num" onclick="appendToDisplay('1')">1</button>
+                                </div>
+                                <div class="col btn-group">
+                                    <button type="button" class="btn btn-outline-light btn-num" onclick="appendToDisplay('2')">2</button>
+                                </div>
+                                <div class="col btn-group">
+                                    <button type="button" class="btn btn-outline-light btn-num" onclick="appendToDisplay('3')">3</button>
+                                </div>
+                                <div class="col btn-group">
+                                    <button type="button" class="btn btn-outline-warning btn-operator" onclick="appendToDisplay('-')">-</button>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col btn-group">
+                                    <button type="button" class="btn btn-outline-light btn-num" onclick="appendToDisplay('0')">0</button>
+                                </div>
+                                <div class="col btn-group">
+                                    <button type="button" class="btn btn-outline-warning btn-operator" onclick="appendToDisplay('.')">.</button>
+                                </div>
+                                <div class="col btn-group">
+                                    <button type="button" class="btn btn-outline-success btn-equal" onclick="calculateResult()">=</button>
+                                </div>
+                                <div class="col btn-group">
+                                    <button type="button" class="btn btn-outline-warning btn-operator" onclick="appendToDisplay('+')">+</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+              
+            </div>
+        </div>
+    </div>
+
+</body> 
+</html>
