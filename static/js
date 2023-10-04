@@ -1,0 +1,55 @@
+function appendToDisplay(value) {
+    document.getElementById('expression').value += value;
+}
+
+function clearDisplay() {
+    document.getElementById('expression').value = '';
+}
+
+function clearLastEntry() {
+    var expression = document.getElementById('expression').value;
+    document.getElementById('expression').value = expression.slice(0, -1);
+}
+
+function calculateResult() {
+    var expression = document.getElementById('expression').value;
+    try {
+        var result = eval(expression);
+        document.getElementById('expression').value = result;
+    } catch (error) {
+        document.getElementById('expression').value = 'Erro na expressão';
+    }
+}
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const equalButton = document.querySelector('.btn-equal');
+    
+    equalButton.addEventListener('click', function () {
+        const numberOfNumbers = 30;
+
+        for (let i = 0; i < numberOfNumbers; i++) {
+            createNeonNumber();
+        }
+    });
+    
+    function createNeonNumber() {
+        const neonNumber = document.createElement('div');
+        neonNumber.textContent = Math.floor(Math.random() * 10).toString(); 
+
+        neonNumber.classList.add('neon-number');
+
+        const initialX = Math.random() * window.innerWidth;
+        neonNumber.style.left = `${initialX}px`;
+
+        const initialY = Math.random() * window.innerHeight;
+        neonNumber.style.top = `${initialY}px`;
+
+        document.body.appendChild(neonNumber);
+
+        
+        setTimeout(function () {
+            neonNumber.remove();
+        }, 6000); 
+    }
+});
